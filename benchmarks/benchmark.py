@@ -6,6 +6,7 @@ from pathlib import Path
 
 from src.binary_search import BinarySearch
 from src.linear_search import LinearSearch
+from src.hash_table import HashTable
 from src.utils.plot_generation import make_all_plots
 from src.utils.string_generation import generate_strings
 
@@ -94,8 +95,8 @@ def run_benchmark():
     structures = [
         (LinearSearch, "Linear Search"),
         (BinarySearch, "Binary Search"),
+        (HashTable, "Hash Table"),
     ]
-
     RESULTS_DIR.mkdir(exist_ok=True)
     insert_rows = []
     lookup_rows = []

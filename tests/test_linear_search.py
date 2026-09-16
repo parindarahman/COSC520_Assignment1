@@ -19,16 +19,16 @@ def test_duplicate_detection(logins, expected):
 def test_empty_structure_finds_nothing():
     """An empty structure reports every query as absent."""
     checker = LinearSearch()
-    assert checker.check("alice") is False
+    assert checker.check("parinda") is False
     assert checker.check("") is False
 
 
 def test_single_login():
     """A structure holding one login finds it and rejects others."""
     checker = LinearSearch()
-    checker.add("alice")
-    assert checker.check("alice") is True
-    assert checker.check("bob") is False
+    checker.add("parinda")
+    assert checker.check("parinda") is True
+    assert checker.check("rahman") is False
 
 
 def test_no_false_negatives(stored_logins):

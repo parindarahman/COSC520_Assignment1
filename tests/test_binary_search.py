@@ -23,7 +23,7 @@ def test_empty_structure_finds_nothing():
     checker = BinarySearch()
 
     # Verify that regular and empty strings are absent initially.
-    assert checker.check("alice") is False
+    assert checker.check("parinda") is False
     assert checker.check("") is False
 
 
@@ -32,9 +32,9 @@ def test_single_login():
     checker = BinarySearch()
 
     # Add one login and verify exact membership.
-    checker.add("alice")
-    assert checker.check("alice") is True
-    assert checker.check("bob") is False
+    checker.add("parinda")
+    assert checker.check("parinda") is True
+    assert checker.check("rahman") is False
 
 
 def test_no_false_negatives(stored_logins):
