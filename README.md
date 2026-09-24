@@ -152,6 +152,7 @@ tests/
   test_linear_search.py
   test_binary_search.py
   test_hashes.py
+  test_hash_table.py
   test_bloom_filter.py
   test_cuckoo_filter.py
   test_xor_filter.py
