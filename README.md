@@ -111,10 +111,6 @@ Writes to `results/`:
 - `filter_comparison.csv`
 - `filter_build_plot.png`, `filter_lookup_plot.png`
 
-`results/filter_accuracy_plot.png` was produced by an earlier revision of
-this script and is retained because the false positive comparison it
-shows is referenced in the report. The rates behind it are recorded in
-`filter_comparison.csv`.
 
 ## Notes on running
 
