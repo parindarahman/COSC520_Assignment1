@@ -50,7 +50,8 @@ class CuckooFilter:
 
         # Extra room beyond the expected count, since insertion failure
         # becomes likely as occupancy approaches capacity.
-        self.table_size = math.ceil(expected_items / bucket_size / load_factor)
+        required = math.ceil(expected_items / bucket_size / load_factor)
+        self.table_size = 1 << (max(1, required) - 1).bit_length()
 
         self.fingerprint_mask = (1 << fingerprint_bits) - 1
         self.buckets = [[] for _ in range(self.table_size)]
